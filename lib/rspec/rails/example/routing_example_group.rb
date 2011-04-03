@@ -1,5 +1,4 @@
 require "action_dispatch/testing/assertions/routing"
-require "rspec/rails/example/routing_example_group/hyper_shortcut"
 
 module RSpec::Rails
   module RoutingExampleGroup
@@ -20,8 +19,6 @@ module RSpec::Rails
     end
 
     included do
-      self.instance_eval{extend HyperShortcut::AdditionalMethods}
-
       metadata[:type] = :routing
 
       before do
@@ -30,3 +27,5 @@ module RSpec::Rails
     end
   end
 end
+
+require "rspec/rails/example/routing_example_group/hyper_shortcut"
